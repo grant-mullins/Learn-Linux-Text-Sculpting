@@ -1,0 +1,62 @@
+Challenge 1: path.txt
+Produce a text file containing the PATH variable without any subdirectories of '/var/opt' (including /var/opt):
+	/usr/local/sbin:/usr/local/bin:/home/ops/projects/monitor:
+	...
+
+Challenge 2: contacts.csv
+Produce a CSV file containing the name, email, and phone number of each person:
+	name, email, phone
+	Alice Johnson, alice.johnson@example.com, 555-1001
+	Bob Smith, bsmith@example.com, 555-1002
+	Carol Davis, caroldavis3@example.net, 555-1003
+	...
+
+Challenge 3: web.log
+Produce a log file containing only the lines with a 4xx or 5xx status code, and reformat the time:
+	2025-12-01T10:15:40Z 404 api.example.com/foo 10.0.0.1
+	2025-12-01T10:15:48Z 500 admin.example.com/login 10.0.0.9
+	2025-12-01T10:16:04Z 503 api.example.com/vi/items 10.0.0.3
+	...
+
+Challenge 4: groceries.csv
+Produce a csv file containing only the lines where the first number is not equal to the second number:
+	apples, 37, 99
+	bananas, 97, 137
+	grapes, 27, 102
+	strawberries, 8, 139
+	...
+
+Challenge 4: math.txt
+Produce a text file with all numbers (1-digit and 2-digit), operators (+, -, *, /), and equal signs followed by exactly one space (except the last character of each line):
+	4 + 5 = 9
+	8 - 7 = 1
+	10 * 3 = 30
+	9 / 3 = 3
+	10 + 1 * 5 = 15
+	...
+
+Challenge 5: countries.txt
+Produce a text file that includes commas in all numbers:
+	Afghanistan: 43,844,100
+	Albania: 2,771,510
+	Algeria: 47,435,300
+	American Samoa: 46,029
+	...
+
+Challenge 6: wikipedia.md
+Produce a markdown file without the in-text citations (of the form [N] or [W N] for N a number), and with each header line preceeded with a '##'. A header line is a phrase (without a period) that is preceeded by and followed by a blank line:
+	
+	##Wikipedia
+	
+	Wikipedia is a free online encyclopedia written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. Founded by Jimmy Wales and Larry Sanger in 2001, Wikipedia has been hosted since 2003 by the Wikimedia Foundation, an American nonprofit organization funded mainly by donations from readers. Wikipedia is the largest and most-read reference work in history.
+	...
+
+Challenge 7: grades.csv
+Produce a CSV file containing the name, id, and grade of all students with a passing grade (C or higher):
+	name, id, grade
+	Alice Johnson, 12001, A
+	Bob Smith, 12002, B
+	Carol Davis, 12003, C
+	Frank Harris, 12006, A
+	...
+
