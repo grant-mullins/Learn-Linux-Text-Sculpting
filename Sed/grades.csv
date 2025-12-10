@@ -1,500 +1,400 @@
-BEGIN
 Name: Alice Johnson
 ID: 12001
 Grade: A
-END
-BEGIN
+
 Name: Bob Smith
 ID: 12002
 Grade: B
-END
-BEGIN
+
 Name: Carol Davis
 ID: 12003
 Grade: C
-END
-BEGIN
+
 Name: David Miller
 ID: 12004
 Grade: D
-END
-BEGIN
+
 Name: Emma Wilson
 ID: 12005
 Grade: F
-END
-BEGIN
+
 Name: Frank Harris
 ID: 12006
 Grade: A
-END
-BEGIN
+
 Name: Grace Lee
 ID: 12007
 Grade: A
-END
-BEGIN
+
 Name: Henry Clark
 ID: 12008
 Grade: C
-END
-BEGIN
+
 Name: Irene Lewis
 ID: 12009
 Grade: A
-END
-BEGIN
+
 Name: Jack Walker
 ID: 12010
 Grade: F
-END
-BEGIN
+
 Name: Karen Hall
 ID: 12011
 Grade: D
-END
-BEGIN
+
 Name: Liam Young
 ID: 12012
 Grade: D
-END
-BEGIN
+
 Name: Mia King
 ID: 12013
 Grade: C
-END
-BEGIN
+
 Name: Noah Wright
 ID: 12014
 Grade: C
-END
-BEGIN
+
 Name: Olivia Scott
 ID: 12015
 Grade: C
-END
-BEGIN
+
 Name: Paul Green
 ID: 12016
 Grade: A
-END
-BEGIN
+
 Name: Quinn Adams
 ID: 12017
 Grade: A
-END
-BEGIN
+
 Name: Ruby Baker
 ID: 12018
 Grade: F
-END
-BEGIN
+
 Name: Samuel Nelson
 ID: 12019
 Grade: B
-END
-BEGIN
+
 Name: Tara Hill
 ID: 12020
 Grade: F
-END
-BEGIN
+
 Name: Uriel Roberts
 ID: 12021
 Grade: C
-END
-BEGIN
+
 Name: Vera Campbell
 ID: 12022
 Grade: B
-END
-BEGIN
+
 Name: William Mitchell
 ID: 12023
 Grade: A
-END
-BEGIN
+
 Name: Xavier Perez
 ID: 12024
 Grade: D
-END
-BEGIN
+
 Name: Yvonne Turner
 ID: 12025
 Grade: A
-END
-BEGIN
+
 Name: Zachary Parker
 ID: 12026
 Grade: D
-END
-BEGIN
+
 Name: Abigail Evans
 ID: 12027
 Grade: F
-END
-BEGIN
+
 Name: Benjamin Edwards
 ID: 12028
 Grade: C
-END
-BEGIN
+
 Name: Chloe Collins
 ID: 12029
 Grade: D
-END
-BEGIN
+
 Name: Daniel Stewart
 ID: 12030
 Grade: F
-END
-BEGIN
+
 Name: Ella Sanchez
 ID: 12031
 Grade: F
-END
-BEGIN
+
 Name: Felix Morris
 ID: 12032
 Grade: B
-END
-BEGIN
+
 Name: Georgia Rogers
 ID: 12033
 Grade: A
-END
-BEGIN
+
 Name: Hunter Reed
 ID: 12034
 Grade: D
-END
-BEGIN
+
 Name: Isla Cook
 ID: 12035
 Grade: F
-END
-BEGIN
+
 Name: Jacob Morgan
 ID: 12036
 Grade: A
-END
-BEGIN
+
 Name: Kylie Bell
 ID: 12037
 Grade: B
-END
-BEGIN
+
 Name: Logan Murphy
 ID: 12038
 Grade: A
-END
-BEGIN
+
 Name: Natalie Bailey
 ID: 12039
 Grade: D
-END
-BEGIN
+
 Name: Owen Rivera
 ID: 12040
 Grade: D
-END
-BEGIN
+
 Name: Piper Cooper
 ID: 12041
 Grade: A
-END
-BEGIN
+
 Name: Ryan Richardson
 ID: 12042
 Grade: A
-END
-BEGIN
+
 Name: Sophie Cox
 ID: 12043
 Grade: C
-END
-BEGIN
+
 Name: Thomas Howard
 ID: 12044
 Grade: C
-END
-BEGIN
+
 Name: Uma Foster
 ID: 12045
 Grade: F
-END
-BEGIN
+
 Name: Victor Ward
 ID: 12046
 Grade: A
-END
-BEGIN
+
 Name: Willow Hughes
 ID: 12047
 Grade: C
-END
-BEGIN
+
 Name: Ximena Flores
 ID: 12048
 Grade: C
-END
-BEGIN
+
 Name: Yusuf Simmons
 ID: 12049
 Grade: C
-END
-BEGIN
+
 Name: Zoey Butler
 ID: 12050
 Grade: A
-END
-BEGIN
+
 Name: Aaron Bryant
 ID: 12051
 Grade: B
-END
-BEGIN
+
 Name: Bella Russell
 ID: 12052
 Grade: B
-END
-BEGIN
+
 Name: Caleb Griffin
 ID: 12053
 Grade: B
-END
-BEGIN
+
 Name: Delia Hayes
 ID: 12054
 Grade: D
-END
-BEGIN
+
 Name: Ethan Myers
 ID: 12055
 Grade: F
-END
-BEGIN
+
 Name: Fiona Long
 ID: 12056
 Grade: B
-END
-BEGIN
+
 Name: Gavin Peterson
 ID: 12057
 Grade: A
-END
-BEGIN
+
 Name: Holly Hughes
 ID: 12058
 Grade: C
-END
-BEGIN
+
 Name: Ian Price
 ID: 12059
 Grade: A
-END
-BEGIN
+
 Name: Jasmine Powell
 ID: 12060
 Grade: A
-END
-BEGIN
+
 Name: Kevin Diaz
 ID: 12061
 Grade: A
-END
-BEGIN
+
 Name: Lily Barnes
 ID: 12062
 Grade: B
-END
-BEGIN
+
 Name: Mason Perry
 ID: 12063
 Grade: C
-END
-BEGIN
+
 Name: Nina Coleman
 ID: 12064
 Grade: D
-END
-BEGIN
+
 Name: Oscar Jenkins
 ID: 12065
 Grade: F
-END
-BEGIN
+
 Name: Paige Stone
 ID: 12066
 Grade: F
-END
-BEGIN
+
 Name: Reid Hart
 ID: 12067
 Grade: B
-END
-BEGIN
+
 Name: Sara Warren
 ID: 12068
 Grade: B
-END
-BEGIN
+
 Name: Tristan Gordon
 ID: 12069
 Grade: D
-END
-BEGIN
+
 Name: Una Watts
 ID: 12070
 Grade: B
-END
-BEGIN
+
 Name: Vincent Chavez
 ID: 12071
 Grade: D
-END
-BEGIN
+
 Name: Wendy Mills
 ID: 12072
 Grade: B
-END
-BEGIN
+
 Name: Xander Shaw
 ID: 12073
 Grade: C
-END
-BEGIN
+
 Name: Yara Boyd
 ID: 12074
 Grade: C
-END
-BEGIN
+
 Name: Zane Holmes
 ID: 12075
 Grade: F
-END
-BEGIN
+
 Name: Amelia Lowe
 ID: 12076
 Grade: A
-END
-BEGIN
+
 Name: Brandon Andrews
 ID: 12077
 Grade: A
-END
-BEGIN
+
 Name: Clara Gilbert
 ID: 12078
 Grade: C
-END
-BEGIN
+
 Name: Dylan Boyd
 ID: 12079
 Grade: D
-END
-BEGIN
+
 Name: Eliza Pratt
 ID: 12080
 Grade: A
-END
-BEGIN
+
 Name: George Dunn
 ID: 12081
 Grade: A
-END
-BEGIN
+
 Name: Hannah Bishop
 ID: 12082
 Grade: B
-END
-BEGIN
+
 Name: Isaac Fisher
 ID: 12083
 Grade: C
-END
-BEGIN
+
 Name: Jenna Holmes
 ID: 12084
 Grade: A
-END
-BEGIN
+
 Name: Kyle Stephens
 ID: 12085
 Grade: F
-END
-BEGIN
+
 Name: Leah Stone
 ID: 12086
 Grade: A
-END
-BEGIN
+
 Name: Mark Barber
 ID: 12087
 Grade: D
-END
-BEGIN
+
 Name: Nora Fox
 ID: 12088
 Grade: C
-END
-BEGIN
+
 Name: Omar Fowler
 ID: 12089
 Grade: B
-END
-BEGIN
+
 Name: Penny Walsh
 ID: 12090
 Grade: F
-END
-BEGIN
+
 Name: Quentin Hardy
 ID: 12091
 Grade: A
-END
-BEGIN
+
 Name: Riley Osborne
 ID: 12092
 Grade: B
-END
-BEGIN
+
 Name: Selena Brady
 ID: 12093
 Grade: A
-END
-BEGIN
+
 Name: Tony Lambert
 ID: 12094
 Grade: D
-END
-BEGIN
+
 Name: Ursula Norris
 ID: 12095
 Grade: A
-END
-BEGIN
+
 Name: Valerie Dean
 ID: 12096
 Grade: A
-END
-BEGIN
+
 Name: Wyatt Holt
 ID: 12097
 Grade: B
-END
-BEGIN
+
 Name: Zoe Hunter
 ID: 12098
 Grade: C
-END
-BEGIN
+
 Name: Adrian Blake
 ID: 12099
 Grade: A
-END
-BEGIN
+
 Name: Bianca Cross
 ID: 12100
 Grade: F
-END
+
