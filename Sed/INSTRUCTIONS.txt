@@ -43,7 +43,19 @@ Produce a text file that includes commas in all numbers:
 	American Samoa: 46,029
 	...
 
-Challenge 7: wikipedia.md
+Challenge 7: conversation.txt
+Produce two text files, alice.txt and bob.txt, that only include their respective lines. Do not include the "Alice: " or "Bob: " prefixes:
+	Hey Bob! Did you get that new Linux server up and running?
+	Nice! Did you go with the minimal installation option?
+	Same here. A bloated system always annoys me.
+	...
+
+	Yeah. I just finished the base install of Debian on it.
+	I did. I like having control over every package that gets installed.
+	First thing I did was update with apt update and apt upgrade.
+	...
+
+Challenge 8: wikipedia.md
 Produce a markdown file without the in-text citations (of the form [N] or [W N] for N a number), and with each header line preceeded with a '##'. A header line is a phrase (without a period) that is preceeded by and followed by a blank line:
 	
 	##Wikipedia
@@ -51,7 +63,7 @@ Produce a markdown file without the in-text citations (of the form [N] or [W N] 
 	Wikipedia is a free online encyclopedia written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. Founded by Jimmy Wales and Larry Sanger in 2001, Wikipedia has been hosted since 2003 by the Wikimedia Foundation, an American nonprofit organization funded mainly by donations from readers. Wikipedia is the largest and most-read reference work in history.
 	...
 
-Challenge 8: grades.csv
+Challenge 9: grades.csv
 Produce a CSV file containing the name, id, and grade of all students with a passing grade (C or higher):
 	name, id, grade
 	Alice Johnson, 12001, A
