@@ -1,0 +1,220 @@
+Alice: Hey Bob! Did you get that new Linux server up and running?
+Bob: Yeah. I just finished the base install of Debian on it.
+Alice: Nice! Did you go with the minimal installation option?
+Bob: I did. I like having control over every package that gets installed.
+Alice: Same here. A bloated system always annoys me.
+Bob: First thing I did was update with apt update and apt upgrade.
+Alice: Did you remember to enable unattended-upgrades for security patches?
+Bob: Not yet. I was going to ask if you prefer that or a cron job with a custom script.
+Alice: For internet-facing servers I usually enable unattended security updates.
+Bob: Makes sense, less chance of forgetting.
+Alice: Did you set up SSH keys yet?
+Bob: I disabled password logins first, then added my public key to authorized_keys.
+Alice: Good. What port are you running SSH on?
+Bob: Still on 22 for now, but I’ll probably move it to a high port later.
+Alice: Moving ports isn’t real security, but it cuts down on noise in the logs.
+Bob: Exactly. Just to reduce brute-force attempts from random bots.
+Alice: Speaking of logs, did you check journalctl after the first reboot?
+Bob: I skimmed it. No obvious errors, but I did see a warning about the hostname.
+Alice: Oh yeah, did you set the hostname with hostnamectl?
+Bob: I did afterward, set it to webnode-alpha.
+Alice: Nice name, sounds like you’re planning more nodes.
+Bob: I am, eventually I want a small cluster behind a load balancer.
+Alice: Are you going to use nginx or HAProxy for that?
+Bob: Probably nginx, I’m more familiar with its config syntax.
+Alice: Do you keep your nginx configs in version control?
+Bob: Yup, I keep a repo with a sites-available template and some common snippets.
+Alice: Good habit. Did you install fail2ban yet?
+Bob: Not yet, but it’s on my list for SSH and nginx auth logs.
+Alice: Don’t forget to tune the ban time and max retries.
+Bob: Yeah, the defaults are a bit conservative for a publicly exposed server.
+Alice: What about a firewall? Are you using ufw or raw iptables?
+Bob: I’m using ufw on this box because it’s quick to set up.
+Alice: What rules did you add?
+Bob: Just allowing OpenSSH for now; I’ll add HTTP and HTTPS once nginx is installed.
+Alice: Did you enable IPv6 rules, or are you sticking with IPv4 only?
+Bob: I left IPv6 enabled, but I should probably review those defaults.
+Alice: Definitely, a lot of people forget IPv6 and leave it wide open.
+Bob: True. I’ll run ufw status verbose later and double-check.
+Alice: Are you going to create separate users for deployments?
+Bob: Yeah. I plan on having a deploy user with restricted sudo rights.
+Alice: Are you using sudoers.d to manage permissions?
+Bob: I am. I like to keep a separate file instead of editing sudoers directly.
+Alice: Same, less chance of breaking the main file.
+Bob: What’s your usual directory layout for web apps?
+Alice: Usually /srv/appname for code, /var/log/appname for logs, and /var/lib/appname for data.
+Bob: That’s cleaner than dumping everything into /opt.
+Alice: I used to use /opt a lot, but /srv feels more appropriate for services.
+Bob: Are you containerizing any of your apps?
+Alice: Yeah, most new stuff goes into Docker containers.
+Bob: Are you running Docker on this new server too?
+Alice: Not yet, but I’m thinking about using Podman instead.
+Bob: I’ve heard good things about Podman, especially rootless containers.
+Alice: Exactly, the security model feels a bit better for multi-user environments.
+Bob: How do you manage container updates?
+Alice: I usually rebuild images via CI and pull them on the server.
+Bob: Do you stop containers manually or use docker-compose for orchestration?
+Alice: I use docker-compose for dev and docker-compose or systemd units in prod.
+Bob: Oh, systemd units for docker containers, that’s interesting.
+Alice: Yeah, you can use systemd to ensure everything starts in the right order.
+Bob: Do you write the unit files manually?
+Alice: Usually, but sometimes I generate them from templates.
+Bob: Are you monitoring resource usage yet?
+Alice: Not yet, but I plan to install node_exporter and use Prometheus.
+Bob: Nice, are you going to pipe that into Grafana for dashboards?
+Alice: Yup, that’s the plan—basic CPU, memory, disk, and nginx metrics.
+Bob: Do you alert on high CPU or response time?
+Alice: I try to, but tuning alerts is always a balancing act.
+Bob: Yeah, no one wants alert fatigue.
+Alice: Exactly, too many alerts and people start ignoring them.
+Bob: How do you handle log rotation for your apps?
+Alice: I usually use logrotate with a config per app.
+Bob: Do you compress old logs?
+Alice: Yes, I set compress and keep about 7 days of logs.
+Bob: That’s reasonable for a small server.
+Alice: Do you centralize logs anywhere?
+Bob: I sometimes ship them to a Graylog instance.
+Alice: Oh nice, a centralized log viewer is super helpful.
+Bob: Especially when you have multiple nodes behind a load balancer.
+Alice: Yeah, debugging without centralized logs is painful.
+Bob: Are you planning on running a database on the same server?
+Alice: Maybe for a small project, but I prefer separate DB servers.
+Bob: Are you more of a PostgreSQL or MySQL person?
+Alice: PostgreSQL, absolutely.
+Bob: Same, I like its feature set and robustness.
+Alice: Do you tweak postgresql.conf much?
+Bob: A little—shared_buffers, work_mem, and a few connection settings.
+Alice: Yeah, just enough tuning to avoid obvious performance issues.
+Bob: Are you backing up the DB with pg_dump or something else?
+Alice: I usually combine pg_dump with periodic base backups.
+Bob: And store them off the server, I hope?
+Alice: Yes, I push them to an encrypted bucket.
+Bob: Good, local backups only are a disaster waiting to happen.
+Alice: How do you handle SSH config on your workstation?
+Bob: I have a ~/.ssh/config with Host aliases and default usernames.
+Alice: Same, it saves so much typing.
+Bob: I also set some defaults like ServerAliveInterval for long sessions.
+Alice: That’s smart, it keeps sessions from randomly dying.
+Bob: Do you use ControlMaster to multiplex SSH connections?
+Alice: I do, it speeds up repeated commands a lot.
+Bob: Yeah, especially when using git over SSH.
+Alice: Speaking of git, do you sign your commits?
+Bob: For important repos, yes. I use a GPG key.
+Alice: I’ve been meaning to set that up everywhere.
+Bob: It’s a bit of work at first, but then it just becomes automatic.
+Alice: Do you manage dotfiles in a git repo too?
+Bob: Yes, I have a dotfiles repo that I symlink from.
+Alice: Same here, I use a bootstrap script to set up new machines.
+Bob: Does your script handle different distros?
+Alice: Mostly; I have conditionals for Debian-based and Arch-based systems.
+Bob: Oh, you use Arch too?
+Alice: For my personal laptop, yeah.
+Bob: How do you feel about pacman compared to apt?
+Alice: Pacman is fast, but I miss some of apt’s higher-level tools.
+Bob: Do you dabble in the AUR?
+Alice: Definitely, that’s half the fun of Arch.
+Bob: Do you worry about AUR package trust?
+Alice: A little, I always read the PKGBUILD for anything important.
+Bob: That’s a good practice.
+Alice: On servers though, I stick with stable distro repos.
+Bob: Same, I don’t like surprises in production.
+Alice: Do you use any configuration management tools?
+Bob: I use Ansible for most things.
+Alice: Same, it’s nice to have idempotent playbooks.
+Bob: Do you store secrets in Ansible Vault?
+Alice: I do, but I’m also testing external secret managers.
+Bob: Like HashiCorp Vault?
+Alice: Yeah, exactly.
+Bob: How’s that going so far?
+Alice: Pretty good, but the initial setup is more complex.
+Bob: There’s always a trade-off between security and complexity.
+Alice: True. Do you use cron much on your servers?
+Bob: For simple scheduled tasks, yes.
+Alice: Have you moved any jobs to systemd timers?
+Bob: A few, I like how they integrate with journald.
+Alice: Yeah, logging is much nicer with systemd timers.
+Bob: Do you document your cron jobs anywhere?
+Alice: I keep them in a README alongside the Ansible role.
+Bob: Nice, so you know why each job exists.
+Alice: Exactly, mystery cron jobs are a nightmare.
+Bob: Have you ever inherited a server with no documentation?
+Alice: Oh yes, and half the scripts were in /root with no comments.
+Bob: That sounds about right.
+Alice: I’ve started insisting on at least minimal inline comments.
+Bob: Future you will be grateful.
+Alice: Future me already sent a thank-you note.
+Bob: Do you tune kernel parameters with sysctl?
+Alice: Occasionally, for networking and file descriptor limits.
+Bob: Are you adjusting open file limits for nginx?
+Alice: Yes, I bump the limits for busy servers.
+Bob: Did you configure swap on this new server?
+Alice: The installer created a small swap, but I might adjust it later.
+Bob: Are you more of a no swap or small swap person?
+Alice: For prod, small swap plus good monitoring.
+Bob: Same, swap thrashing is a red flag anyway.
+Alice: Do you encrypt disks on servers?
+Bob: Depends on the threat model, but often yes.
+Alice: Using LUKS on Linux?
+Bob: Exactly, with a keyfile and recovery passphrase.
+Alice: Do you have a process for rotating keys?
+Bob: Not as formal as it should be, honestly.
+Alice: At least you’re aware of it.
+Bob: Yeah, one step at a time.
+Alice: Do you keep a golden image for new VMs?
+Bob: I do, with baseline security hardening already applied.
+Alice: That’s really handy for scaling.
+Bob: It saves me from repeating the same setup steps.
+Alice: Are you using cloud-init on those images?
+Bob: Yes, to inject ssh keys and some initial config.
+Alice: That can be really powerful when done right.
+Bob: Have you ever broken a server with a bad cloud-init script?
+Alice: I have, and it was not fun.
+Bob: I believe it.
+Alice: Are you doing any configuration validation?
+Bob: I run ansible-lint and some YAML linters.
+Alice: That already catches a lot of silly mistakes.
+Bob: Yeah, especially indentation issues.
+Alice: Do you have pre-commit hooks for your infra repos?
+Bob: I do, they run formatting and some tests.
+Alice: That sounds solid.
+Bob: What’s your favorite shell on Linux?
+Alice: I still use bash for scripts, but zsh for interactive use.
+Bob: I’m similar, bash for portability.
+Alice: Do you use tmux or screen?
+Bob: tmux, absolutely.
+Alice: Same, I use it on every server.
+Bob: Do you sync your tmux config across machines?
+Alice: Yep, it’s part of my dotfiles.
+Bob: I should really clean up my tmux config.
+Alice: It’s worth it, even a few keybindings help a lot.
+Bob: Are you using any fancy prompts?
+Alice: I use a prompt that shows git branch and exit codes.
+Bob: That’s super useful when hopping around repos.
+Alice: Agreed, seeing the exit status saves time.
+Bob: Do you alias common commands?
+Alice: Yeah, like ll for ls -alF and gst for git status.
+Bob: Same here, a few aliases go a long way.
+Alice: Have you considered writing a small helper script for this new server?
+Bob: Actually, yeah, something to check health and disk usage.
+Alice: You could have it summarize CPU, memory, and top services.
+Bob: That’d be useful as a quick sanity check.
+Alice: You could even integrate it into MOTD when you SSH in.
+Bob: That’s a cool idea, a dynamic MOTD with system info.
+Alice: There are some tools that already do that.
+Bob: True, but rolling a small one sounds fun.
+Alice: Just don’t forget to handle error cases.
+Bob: I’ll try not to, but you know how scripts evolve.
+Alice: Oh yes, temporary scripts that live forever.
+Bob: Exactly.
+Alice: Anyway, once the server is stable, we should run some load tests.
+Bob: Good idea, maybe use hey or ab to hit the web endpoints.
+Alice: And monitor CPU, memory, and response times while doing it.
+Bob: That’ll give us a baseline before we put real traffic on it.
+Alice: Sounds like a plan.
+Bob: Cool, I’ll finish the initial setup and ping you when it’s ready.
+Alice: Awesome. I’m looking forward to seeing it in action.
+Bob: Same here. It’ll be a nice addition to our little infrastructure lab.
+Alice: Definitely, and a good excuse to tweak more configs.
+Bob: Like we needed an excuse.
+Alice: True enough.
+
